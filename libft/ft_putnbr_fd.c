@@ -28,3 +28,22 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(i / 10, fd);
 	ft_putchar_fd((i % 10) + '0', fd);
 }
+
+int	ft_putnbr(long long n)
+{
+	unsigned long long	i;
+	int					count;
+
+	count = 0;
+	if (n < 0)
+	{
+		count += ft_putchar('-');
+		i = (unsigned long long)(-n);
+	}
+	else
+		i = (unsigned long long)n;
+	if (i >= 10)
+		count += ft_putnbr(i / 10);
+	count += ft_putchar((i % 10) + '0');
+	return (count);
+}
