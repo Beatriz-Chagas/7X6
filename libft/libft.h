@@ -78,7 +78,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 char	*get_next_line(int fd);
 char	*ft_strjoin_gnl(char const*s1, char const *s2);
 char	*ft_strchr_gnl(const char *s, int c);
-char	*ft_strdup_gnl(const char *src);
+char	*ft_strdup_gnl(const char *src);get_next_line_utils.c
 
 // PrintF
 int	ft_putchar(char c);
