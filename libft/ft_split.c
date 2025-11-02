@@ -46,7 +46,7 @@ char	**ft_split(char const *s, char c)
 		while (*s && *s != c)
 			s++;
 		if (s > start)
-		splitt[i++] = ft_substr(start, 0, s - start);
+			splitt[i++] = ft_substr(start, 0, s - start);
 	}
 	splitt[i] = NULL;
 	return (splitt);
