@@ -17,9 +17,7 @@ char    *ft_strdup(char *src)
 	if (!src)
 		return (NULL);
 	while (src[i])
-	{
 		dup[j++] = src[i++];
-	}
 	dup[j] = '\0';
 	return (dup);
 }

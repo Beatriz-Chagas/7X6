@@ -1,15 +1,24 @@
-
 int		max(int* tab, unsigned int len)
 {
-	unsigned int	i = 1;
-	int	maxi = tab[0];
+	int i = 0;
+	int maxnum = 0;
 
-	if (len == 0)
+	if (len == 0 || tab == NULL)
 		return (0);
-	while (tab[i] > maxi)
+	while (i < len)
 	{
-		tab[i] > maxi;
+		if (tab[i] > maxnum)
+			maxnum = tab[i];
 		i++;
 	}
-	return (maxi);
+	return (maxnum);
 }
+
+// #include <stdio.h>
+
+// int main (void)
+// {
+// 	int int_tab[] = {1, 6, 8, 24, 2, 3};
+// 	printf("%d \n", max(int_tab, 6));
+// 	return (0);
+// }
