@@ -1,16 +1,17 @@
 
 int	ft_atoi(const char *str)
 {
-	int i = 1;
+	int = i;
+	int sign = 1;
 	int result = 0;
 
-	while (*str == 32 || (*str >= 9 && *str <= 13))
+	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
+		i++;
+	if (str[i] == '-')
+		sign *= -1;
+	if (str[i] == '+' || str[i] == '-')
 		str++;
-	if (*str == '-')
-		i *= -1;
-	if (*str == '+' || *str == '-')
-		str++;
-	while (*str >= '0' && *str <= '9')
-		result = result * 10 + (*str++ - '0');
+	while (str[i]>= '0' && str[i]<= '9')
+		result = result * 10 + (str[i++]- '0');
 	return (i * result);
 }
